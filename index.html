@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Premium Auth</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <div class="login-wrapper">
+            <div class="login-card">
+                <!-- Header -->
+                <div class="login-header">
+                    <div class="logo-circle">
+                        <span class="logo-icon">⚡</span>
+                    </div>
+                    <h1 class="login-title">Bienvenido</h1>
+                    <p class="login-subtitle">Accede a tu cuenta</p>
+                </div>
+
+                <!-- Form -->
+                <form class="login-form" id="loginForm">
+                    <!-- Email Input -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">📧</span>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                class="form-input" 
+                                placeholder="tu@email.com"
+                                required
+                            >
+                            <span class="input-check" id="emailCheck">✓</span>
+                        </div>
+                        <span class="form-error" id="emailError"></span>
+                    </div>
+
+                    <!-- Password Input -->
+                    <div class="form-group">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔐</span>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                class="form-input" 
+                                placeholder="••••••••"
+                                required
+                            >
+                            <button type="button" class="toggle-password" id="togglePassword">👁️</button>
+                        </div>
+                        <span class="form-error" id="passwordError"></span>
+                    </div>
+
+                    <!-- Remember & Forgot -->
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="remember" class="checkbox-input">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">Recuérdame</span>
+                        </label>
+                        <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn-submit">
+                        <span class="btn-text">Iniciar Sesión</span>
+                        <span class="btn-loader"></span>
+                    </button>
+                </form>
+
+                <!-- Divider -->
+                <div class="divider">
+                    <span>O continúa con</span>
+                </div>
+
+                <!-- Social Buttons -->
+                <div class="social-buttons">
+                    <button class="social-btn google" title="Google">
+                        <span>G</span>
+                    </button>
+                    <button class="social-btn github" title="GitHub">
+                        <span>⚙️</span>
+                    </button>
+                    <button class="social-btn microsoft" title="Microsoft">
+                        <span>⊞</span>
+                    </button>
+                </div>
+
+                <!-- Signup Link -->
+                <div class="auth-link">
+                    <p>¿No tienes cuenta? <a href="#">Regístrate aquí</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Modal -->
+        <div class="modal" id="successModal">
+            <div class="modal-content">
+                <div class="modal-icon success-icon">✓</div>
+                <h2 class="modal-title">¡Bienvenido!</h2>
+                <p class="modal-message" id="modalMessage"></p>
+                <button class="modal-btn" id="closeModal">Continuar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
